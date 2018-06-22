@@ -14,20 +14,25 @@ Pod::Spec.new do |s|
   #  can feel like a chore to fill in it's definitely to your advantage. The
   #  summary should be tweet-length, and the description more in depth.
   #
-
+  #设置名称
   s.name         = "CocopodsTestDemo"
-  s.version      = "0.0.1"
-  s.summary      = "A short description of CocopodsTestDemo."
+  #设置版本
+  s.version      = "1.0.0" 
+  # 设置摘要
+  s.summary      = "CocopodsTestDemo."
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
   #   * Try to keep it short, snappy and to the point.
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
+  # 设置详情
   s.description  = <<-DESC
+                  this is the  CocopodsTestDemo
                    DESC
-
-  s.homepage     = "http://EXAMPLE/CocopodsTestDemo"
+ 
+  #设置仓库主页 
+  s.homepage     = "https://github.com/laotang013/CocopodsTestDemo.git"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -37,9 +42,9 @@ Pod::Spec.new do |s|
   #  CocoaPods will detect a license file if there is a named LICENSE*
   #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
   #
-
-  s.license      = "MIT (example)"
-  # s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
+  # 设置许可证
+  # s.license      = "MIT (example)"
+  s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
 
 
   # ――― Author Metadata  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -51,7 +56,7 @@ Pod::Spec.new do |s|
   #  Specify a social_media_url where others can refer to, for example a twitter
   #  profile URL.
   #
-
+  # 设置作者
   s.author             = { "Start" => "250226337@qq.com" }
   # Or just: s.author    = "Start"
   # s.authors            = { "Start" => "250226337@qq.com" }
@@ -64,7 +69,7 @@ Pod::Spec.new do |s|
   #
 
   # s.platform     = :ios
-  # s.platform     = :ios, "5.0"
+  s.platform     = :ios, "8.0"
 
   #  When using multiple platforms
   # s.ios.deployment_target = "5.0"
@@ -78,8 +83,8 @@ Pod::Spec.new do |s|
   #  Specify the location from where the source should be retrieved.
   #  Supports git, hg, bzr, svn and HTTP.
   #
-
-  s.source       = { :git => "http://EXAMPLE/CocopodsTestDemo.git", :tag => "#{s.version}" }
+  #设置仓库源,表示在哪可以找到组件工程
+  s.source       = { :git => "https://github.com/laotang013/CocopodsTestDemo.git", :tag => "#{s.version}" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -89,9 +94,9 @@ Pod::Spec.new do |s|
   #  For header files it will include any header in the folder.
   #  Not including the public_header_files will make all headers public.
   #
-
-  s.source_files  = "Classes", "Classes/**/*.{h,m}"
-  s.exclude_files = "Classes/Exclude"
+  #设置 源文件路径 => 不是整个工程的文件，而是自己封装的代码，以后别的工程引入，就会引入这里的代码。
+  s.source_files  = "CocopodsTestDemo/**/*.{h,m}"
+  # s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
 
@@ -129,7 +134,7 @@ Pod::Spec.new do |s|
   #  where they will only apply to your library. If you depend on other Podspecs
   #  you can include multiple dependencies to ensure it works.
 
-  # s.requires_arc = true
+  s.requires_arc = true
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # s.dependency "JSONKit", "~> 1.4"
